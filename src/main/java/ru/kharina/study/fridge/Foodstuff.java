@@ -11,5 +11,9 @@ public abstract class Foodstuff {
         return name;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public abstract String specification();
 }

@@ -1,13 +1,14 @@
 package ru.kharina.study.fridge;
 
-import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 public class testSpring {
     public static void main(String[] args) {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(
+                SpringConfig.class
         );
-        Fridge fridge = context.getBean("fridgeBean", Fridge.class);
+        Fridge fridge = context.getBean("fridge", Fridge.class);
         fridge.openTheFridge();
         context.close();
     }

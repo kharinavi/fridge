@@ -1,5 +1,7 @@
 package ru.kharina.study.fridge;
 
+import org.springframework.stereotype.Component;
+
 public class PlantProduct extends Foodstuff{
     private String plantName;
 
